@@ -6,7 +6,9 @@
 
 \RequirePackage{titlesec}
 \RequirePackage{fontawesome}
-\RequirePackage{hyperref}
+\RequirePackage{graphics}
+\RequirePackage{color}
+\RequirePackage{adjustbox}
 \RequirePackage
 [
   left=0.65in,
@@ -15,6 +17,11 @@
   bottom=0.65in
 ]
 {geometry} 
+\RequirePackage{hyperref}
+
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
 
 \titleformat{\section}  
   {\LARGE\scshape\raggedright} 
@@ -26,6 +33,16 @@
   {\large\scshape\raggedright}
   {}{0em}
   {}
+  
+\newcommand{\cvheader}[2]
+{
+\begin{minipage}{.7\textwidth}
+{#1}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+  \centerline{\includegraphics[width=4cm]{{#2}}}
+\end{minipage}
+}
 
 \newcommand{\name}[1]
 {
@@ -36,22 +53,32 @@
 
 \newcommand{\address}[1]
 {
-  \centerline{\Large{#1}} \smallskip
+  {\Large{\faMapMarker \, \, #1}} 
 }
 
 \newcommand{\mail}[1]
 {
-  \centerline{\Large{\faEnvelopeO \,\, #1}} \smallskip
+  {\Large{\faEnvelopeO \,\, #1}} 
+}
+
+\newcommand{\mailalt}[1]
+{
+  {\Large{\faEnvelope \,\, #1}} 
 }
 
 \newcommand{\phone}[1]
 {
-  \centerline{\Large{\faMobilePhone \,\, #1}} \smallskip
+  {\Large{\faPhone \,\, #1}} 
+}
+
+\newcommand{\social}[1]
+{
+  {\Large{\faLinkedin \, \faGithub \, \faFacebook \, \faInstagram \, \faStackOverflow \,\, #1}} 
 }
 
 \newcommand{\webpage}[1]
 {
-  \centerline{\Large{\faGithub \,\, #1}} \smallskip
+  {\Large{\faInternetExplorer \,\, #1}} 
 }
 
 \newcommand{\datedsection}[2]
@@ -59,8 +86,13 @@
   \section[#1]{#1 \hfill #2}
 }
 
-\newcommand{\datedsubsection}[4]
+\newcommand{\longdatedsubsection}[4]
 {
   \subsection[#1]{{#1} \hfill #2 \\
 	  		          {#3} \hfill #4}
+}
+
+\newcommand{\datedsubsection}[4]
+{
+  \subsection[#1]{{#1} \hfill #2} 
 }
