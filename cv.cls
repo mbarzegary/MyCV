@@ -23,6 +23,7 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
 \providecommand{\faInstagram}{}
+\providecommand{\faInternetExplorer}{}
 
 \titleformat{\section}  
   {\LARGE\scshape\raggedright} 
