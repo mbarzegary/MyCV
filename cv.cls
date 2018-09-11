@@ -22,6 +22,7 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
+% The Travis CI has an old version of fontawesome package, so we should define some of the commands in case they are defined
 \providecommand{\faInstagram}{}
 \providecommand{\faInternetExplorer}{}
 
