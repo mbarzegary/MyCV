@@ -20,7 +20,7 @@ Fill the required fields as requested, and enter `_build/main.pdf` when it asks 
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+- sudo apt-get -qq update && sudo apt-get install -y texlive-fonts-recommended
   texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex fonts-font-awesome
 script:
 - mkdir _build
