@@ -21,7 +21,7 @@ sudo: required
 dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex fonts-font-awesome
 script:
 - mkdir _build
 - xelatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
