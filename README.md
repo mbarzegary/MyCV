@@ -5,7 +5,7 @@ This repository mainly contains my CV, but in general, it could be treated as a 
 
 It is primarily based on [CV Template](), but I have just modified some part of it and have added Continuous Integration support, so it can be generated automatically each time you push your changes to the repository. In each push or pull request, a new release is created based on the specified tag, so it helps you to have a full backup of the previous versions of your CV in the release section.
 
-You can also skip the CI part and use the template entirely for your own. In this case, you can easily build the template using the `$ pdflatex main.tex` command locally, and then, you can have a permanent link to your CV just by using [http://nbviewer.jupyter.org]. For instance, my link is [http://nbviewer.jupyter.org/github/mbarzegary/MyCV/blob/master/main.pdf], and I can put it anywhere required. In this scenario, make sure to run `$ ./clean.sh` prior to pushing the changes to GitHub to clean the TeX output files.
+You can also skip the CI part and use the template entirely for your own. In this case, you can easily build the template using the `$ xelatex main.tex` command locally, and then, you can have a permanent link to your CV just by using [http://nbviewer.jupyter.org]. For instance, my link is [http://nbviewer.jupyter.org/github/mbarzegary/MyCV/blob/master/main.pdf], and I can put it anywhere required. In this scenario, make sure to run `$ ./clean.sh` prior to pushing the changes to GitHub to clean the TeX output files.
 
 ## Instructions for Continuous Integration
 If you want your CV be generated each time you push your changes to GitHub, first, create an account on [https://travis-ci.org/], and then, fork or clone this repository to your  GitHub account and add it to your Travis repositories.
@@ -21,10 +21,10 @@ sudo: required
 dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
 script:
 - mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
+- xelatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
 deploy:
   provider: releases
   api_key:
