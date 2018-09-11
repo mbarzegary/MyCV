@@ -1,0 +1,17 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+script:
+- mkdir _build
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: JQDxHXl99vibualkHCUZGCAvzDOAeiqAgJOE4KNhTbwOJ43sEX8nYfN+K2rlJufoIt8G5hEF6iCkiR8PTRzEKPqOatj+6asIUeYTrbenwQ4IerI0z1TV5zj/l1nskJGD21rNdcZlrxbRFblo7Gt4eCVcn6S5wFyXix12BrOmUq510Ug8zVDY0JSsGtabL4eWgUKjFJwIvhcaYdlSxjsukoJzR3q2+7mpNuUHDPMMPkvQ0vYB1+PDcrJhjJ3ObBwHaShnsN0va4f7DqTtNcTDG/kKWxKe3xmPNlzjmzidf0iiren85kLyl5PqVfLNBRbwAYlXUCGDzVw4La3L+HJHb4SeFg+1biie7kH5WwhbV7agg9wPdihRs686kt0m8MuaEiHg1KidOyIwQ6RnKQNaxD3k8ph3ZcuKEP7rFoB5/zKGkFYacdQPJDpfoq80L1NG/lW8LgIn1OXQ5Z9LXZb5RU4iMQR12aeuQ4MkGyVwqjESFNDJ12ccC/TU/cFUaWEARRu5sH6PeQVV8LraPn7ZsKdA7aTDOSeFsROI05keC6SxsF16N1sqv1e69rtJgUK8wpUVNiGV2nLye2lnf2We0ftpv+vK5eXC8sB9SAqFj8s5FgdJxQyXHetpDGxey4JWlcJYOLNJidBsY5cyuYazf7TF0/b9vHsA/BGIMJPPvkM=
+  file: _build/main.pdf
+  skip_cleanup: true
+  on:
+    tags: true
+repo: mbarzegary/MyCV
