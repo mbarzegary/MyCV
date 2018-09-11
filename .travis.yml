@@ -2,7 +2,9 @@ sudo: required
 dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex fonts-font-awesome
+  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex fonts-font-awesome xzdec
+- sudo tlmgr init-usertree
+- sudo tlmgr install fontawesome
 script:
 - mkdir _build
 - xelatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
