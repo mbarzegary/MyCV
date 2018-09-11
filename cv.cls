@@ -58,7 +58,7 @@
 
 \newcommand{\mail}[1]
 {
-  {\Large{\faEnvelopeO \,\, #1}} 
+  {\Large{\faEnvelope \,\, #1}} 
 }
 
 \newcommand{\mailalt}[1]
