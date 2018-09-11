@@ -1,11 +1,11 @@
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y texlive-fonts-recommended
-  texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex fonts-font-awesome
+- sudo add-apt-repository ppa:jonathonf/texlive-2016
+- sudo apt-get -qq update && sudo apt-get install -y texlive-full dvipng fonts-font-awesome
 script:
 - mkdir _build
-- xelatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
 deploy:
   provider: releases
   api_key:
