@@ -22,6 +22,7 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
+\providecommand{\faInstagram}{}
 
 \titleformat{\section}  
   {\LARGE\scshape\raggedright} 
