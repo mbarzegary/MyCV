@@ -5,7 +5,7 @@ before_install:
   texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex fonts-font-awesome
 script:
 - mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
+- xelatex -interaction=nonstopmode -halt-on-error -output-directory _build main.tex
 deploy:
   provider: releases
   api_key:
