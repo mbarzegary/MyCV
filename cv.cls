@@ -19,6 +19,10 @@
 {geometry} 
 \RequirePackage{hyperref}
 
+\RequirePackage[T1]{fontenc}
+\RequirePackage{mathpazo,euler}
+\RequirePackage[scaled=0.9]{DejaVuSansMono}
+
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
