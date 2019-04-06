@@ -19,9 +19,8 @@
 {geometry} 
 \RequirePackage{hyperref}
 
-\RequirePackage[T1]{fontenc}
-\RequirePackage{mathpazo,euler}
-\RequirePackage[scaled=0.9]{DejaVuSansMono}
+\usepackage{dejavu}
+\usepackage[T1]{fontenc}
 
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
@@ -31,7 +30,7 @@
 \providecommand{\faInternetExplorer}{}
 
 \titleformat{\section}  
-  {\LARGE\scshape\raggedright} 
+  {\Large\scshape\raggedright} 
   {}{0em}                      
   {}                           
   [\titlerule] 
@@ -53,39 +52,39 @@
 
 \newcommand{\name}[1]
 {
-  \centerline{\Huge{\MakeUppercase{\textbf{#1}}}}
+  \centerline{\huge{\MakeUppercase{\textbf{#1}}}}
   \bigskip
   \bigskip
 }
 
 \newcommand{\address}[1]
 {
-  {\Large{\faMapMarker \, \, #1}} 
+  {\large{\faMapMarker \, \, #1}} 
 }
 
 \newcommand{\mail}[1]
 {
-  {\Large{\faEnvelope \,\, #1}} 
+  {\large{\faEnvelope \,\, #1}} 
 }
 
 \newcommand{\mailalt}[1]
 {
-  {\Large{\faEnvelope \,\, #1}} 
+  {\large{\faEnvelope \,\, #1}} 
 }
 
 \newcommand{\phone}[1]
 {
-  {\Large{\faPhone \,\, #1}} 
+  {\large{\faPhone \,\, #1}} 
 }
 
 \newcommand{\social}[1]
 {
-  {\Large{\faLinkedin \, \faGithub \, \faFacebook \, \faInstagram \, \,\, #1}} 
+  {\large{\faLinkedin \, \faGithub \, \faFacebook \, \faInstagram \, \,\, #1}} 
 }
 
 \newcommand{\webpage}[1]
 {
-  {\Large{\faInternetExplorer \,\, #1}} 
+  {\large{\faInternetExplorer \,\, #1}} 
 }
 
 \newcommand{\datedsection}[2]
