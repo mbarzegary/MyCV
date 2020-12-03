@@ -79,7 +79,7 @@
 
 \newcommand{\social}[1]
 {
-  {\large{\faLinkedin \, \faGithub \, \faFacebook \, \faInstagram \, \,\, #1}} 
+  {\large{\faLinkedin \, \faGithub \, \faTwitter \, \,\, #1}} 
 }
 
 \newcommand{\webpage}[1]
