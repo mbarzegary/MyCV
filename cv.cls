@@ -79,7 +79,17 @@
 
 \newcommand{\social}[1]
 {
-  {\large{\faLinkedin \, \faGithub \, \faTwitter \, \,\, #1}} 
+  {\large{\faLinkedin \, \faGithub \, \,\, #1}} 
+}
+
+\newcommand{\socialTwitter}[1]
+{
+  {\large{\faTwitter \, \,\, #1}} 
+}
+
+\newcommand{\socialYoutube}[1]
+{
+  {\large{\faYoutubePlay \, \,\, #1}} 
 }
 
 \newcommand{\webpage}[1]
