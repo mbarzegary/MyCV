@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/mbarzegary/MyCV.svg?branch=master)](https://travis-ci.org/mbarzegary/MyCV)
 
+(*DISCLAIMER: The CV is quite outdated and no longer maintained here. An updated version of my CV can be found [in this repository](https://github.com/mbarzegary/MyCV-shortened). The CI pipeline is based on Travis, which no longer provides free services.*)
+
 # My CV
 This repository mainly contains my CV, but in general, it could be treated as a Latex Template for an Academic Curriculum Vitae with a support of being automatically generated using Travis CI.
 
